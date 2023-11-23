@@ -5,8 +5,7 @@ from pwn import p64
 
 def slog(n, m): return success(': '.join([n, hex(m)]))
 
-p = remote('127.0.0.1', 8001)
-# p = process('./program')
+p = process('./program')
 
 p.recvuntil(b': ')
 win = int(p.recvn(8), 16)
