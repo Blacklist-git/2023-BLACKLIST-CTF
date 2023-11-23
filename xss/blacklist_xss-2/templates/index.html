@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlaskList XSS-2 Challenge</title>
+</head>
+<body>
+    <h1>XSS Challenge - 2</h1>
+    <p>This page has an XSS vulnerability. Can you solve this?</p>
+
+    <!-- 쿼리 입력 폼 -->
+    <form action="{{ url_for('execute_query') }}" method="post">
+        <label for="query">Enter Query:</label>
+        <!-- 필터링된 쿼리를 출력 -->
+        <input type="text" id="query" name="query" value="{{ query }}" autocomplete="off">
+        <button type="submit">Execute Query</button>
+    </form>
+
+    <!-- 쿼리 실행 결과 출력 -->
+    <p>Filtered Query: {{ query | escape}}</p>
+
+    <!-- 쿼리 결과를 출력하는 부분 -->
+    <div>{{ query | safe}}</div>
+    
+
+
+    <script>
+        Object.defineProperty(document, 'cookie', {
+            get: function() {
+                return '';
+            },
+            set: function() {
+                return true;
+            }
+        });
+    </script>
+
+
+</body>
+</html>
