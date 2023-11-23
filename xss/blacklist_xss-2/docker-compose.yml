@@ -5,5 +5,5 @@ services:
     build: 
       context: .
     ports:
-      - "8001:8001"
-    container_name: blacklist_xss
+      - "8002:8002"
+    container_name: blacklist_xss-2

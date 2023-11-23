@@ -32,6 +32,4 @@ def execute_query():
     return render_template("index.html", flag=FLAG, query=Markup(query))
 
 if __name__ == "__main__":
-    app.run(debug=True, port=8001)
-
-
+    app.run(debug=True, port=8002)
