@@ -1,0 +1,4 @@
+solve
+Dockerfile
+docker-compose.yml
+*.c
