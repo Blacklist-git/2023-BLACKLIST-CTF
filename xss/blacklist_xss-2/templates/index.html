@@ -11,7 +11,7 @@
     <p>This page has an XSS vulnerability. Can you solve this?</p>
 
     <!-- 쿼리 입력 폼 -->
-    <form action="{{ url_for('execute_query') }}" method="post">
+    <form action="{{ url_for('execute_query') }}" method="get">
         <label for="query">Enter Query:</label>
         <!-- 필터링된 쿼리를 출력 -->
         <input type="text" id="query" name="query" value="{{ query }}" autocomplete="off">
@@ -19,10 +19,11 @@
     </form>
 
     <!-- 쿼리 실행 결과 출력 -->
-    <p>Filtered Query: {{ query | escape}}</p>
+    <p>Filtered Query: {{ query }}</p>
 
     <!-- 쿼리 결과를 출력하는 부분 -->
-    <div>{{ query | safe}}</div>
+    <div>{{ query  }}</div>
+    
     
 
 
