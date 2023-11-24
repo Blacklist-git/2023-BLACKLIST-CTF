@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Website Custom Cursor in SciFi HUD Target Style</title>
+  <link href='https://fonts.googleapis.com/css?family=DM Mono' rel='stylesheet'><link rel="stylesheet" href="./p2.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<body>
+<!--  REQUIRED / the cursor is made of two circles: small and big -->
+  <div class="cursor small"></div>
+  <div class="cursor big"></div>
+
+<!--  OPTIONAL / background texture  -->
+  <div class="bg"></div>
+  
+<!--  OPTIONAL / page container and navbar  -->
+  <div class="container flex">
+    <div class="nav flex">
+      <div class="name">BLACKLIST {CTF}</div>
+      <div class="menu flex">
+
+        <a href="http://34.197.212.64:8002" target="_blank">Go site</a>
+        <a href="./files/xss_2.py" download="myfile.py">FileDownload</a>
+        <a href="./index.html" target="self">Home</a>
+      </div>
+    </div>
+    
+<!--  OPTIONAL / explanations and texts  -->
+    <div class="hero flex">
+      
+      <div>
+        <h1>Catch The Flag!</h1>
+        <p>Please find the flag and enter it!</p>
+      </div>
+      
+      <!-- 예시 코드에서의 변경 부분 -->
+      <input type="text" class="example" id="flagInput" placeholder="Enter the flag" onkeypress="handleKeyPress(event)" />
+
+      <div>
+        <h2>How was it?</h2>
+        <p>If you are impressed, please vote!</p>
+      </div>
+      
+    </div>
+    
+<!--  OPTIONAL / HUD effects  -->
+    <div class="hud__effects flex">
+      <div class="effect__long"></div>
+      <div class="effect__small"></div>
+      <div class="effect__long"></div>
+      <div class="effect__small"></div>
+      <div class="effect__small"></div>
+  </div>
+</body>
+<!-- partial -->
+  <script  src="./p2.js"></script>
+
+</body>
+</html>
